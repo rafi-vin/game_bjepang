@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    transition: opacity 0.5s ease;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff69b4;
+  }
+  
+  #question-container {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+  #question-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  #options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #options-container button {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff69b4;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #ff69b4;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  }
+  
+  #options-container button:hover {
+    background-color: #ff69b4;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  #options-container button:active {
+    transform: scale(0.95);
+  }
+  
+  #next-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff69b4;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  #next-button:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+  }
+  
+  #next-button:active {
+    transform: scale(0.95);
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #score {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Responsif untuk layar kecil */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    #question-text {
+      font-size: 18px;
+    }
+  
+    #options-container button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    #next-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    #result {
+      font-size: 16px;
+    }
+  
+    #score {
+      font-size: 16px;
+    }
+  }
